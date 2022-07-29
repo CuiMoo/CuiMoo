@@ -1,8 +1,8 @@
 - 👋 Hi, I’m @CuiMoo
 - 👀 I’m interested in Pygame
 - 🌱 I’m currently learning basic Python,tkinter,MicroPython
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+- 💞️ I’m looking to collaborate on Internet of thing for argriculture.
+- 📫 How to reach me IG: @cuimoo
 
 <!---
 CuiMoo/CuiMoo is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
