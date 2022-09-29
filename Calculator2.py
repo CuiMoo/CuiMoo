@@ -9,17 +9,21 @@ content = ''
 text_in = StringVar(value='0')
 btn1bg='#dbe3ab'
 btn2bg='#e3b3ab'
+
+
 def pb(number):
     global content
     content = content+str(number)
     text_in.set(content)
 
 def equal():
-    global content
-    cal = float(eval(content))
-    text_in.set(cal)
-    print(text_in.get(),type(text_in.get()))
-    content=''
+    try:
+        global content
+        cal = float(eval(content))
+        text_in.set(cal)
+        content=str(cal)
+    except Exception as e:
+        text_in.set(e)
 
 def clear():
     global content
@@ -32,6 +36,7 @@ def dell():
     dat=str(text_in.get())
     content=dat[:-1]
     text_in.set(content)
+
 #Display
 display = Entry(font=('Franklin Gothic',30),fg='black',bg='#caeceb',textvariable=text_in,justify='right')
 display.grid(columnspan=4)
@@ -71,9 +76,9 @@ btnDot = Button(text='·',font=('arial',30,'bold'),bg=btn1bg,padx=32,pady=15,com
                                                     ).grid(row=4,column=0)
 btn0 = Button(text='0',font=('arial',30,'bold'),bg=btn1bg,padx=27,pady=15,command=lambda:pb(0)
                                                     ).grid(row=4,column=1)
-btnC = Button(text='C',font=('arial',30,'bold'),padx=24,pady=15,bg='#eda64a',command=clear
+btnC = Button(text='C',font=('arial',30,'bold'),padx=23,pady=15,bg='#eda64a',command=clear
                                                     ).grid(row=4,column=2)
-btnDi = Button(text='÷',font=('arial',30,'bold'),bg=btn2bg,padx=28,pady=15,command=lambda:pb('/')
+btnDi = Button(text='÷',font=('arial',30,'bold'),bg=btn2bg,padx=29,pady=15,command=lambda:pb('/')
                                                     ).grid(row=4,column=3)
 
 #row5
