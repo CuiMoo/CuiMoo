@@ -13,7 +13,7 @@ class Officer:
         print(f'latest salary :{self.__salary}')
     
     def setSalary(self,dept,sal):
-        if dept == 'IT':
+        if dept != 'IT':
             if int(sal) > 5000:
                 print('is unable to fix the new salary,Take the old data')
             else:
